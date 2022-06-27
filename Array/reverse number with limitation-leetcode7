@@ -1,0 +1,19 @@
+public class Solution {
+    public int Reverse(int x) {
+       
+       int rev = 0;
+        while (x != 0) {
+            int pop = x % 10;
+            x /= 10;
+            
+            if (rev > int.MaxValue/10 || (rev == int.MaxValue / 10 && pop > 7)) return 0;
+            if (rev < int.MinValue/10 || (rev == int.MinValue / 10 && pop < -8)) return 0;
+            rev = rev * 10 + pop;
+        }
+        return rev;
+    }
+   
+}
+
+//Here we need to stop before the number exceeds integer limit...so we need to keep checking if reverse number is greater than max integer  value by 10 as in next step it will be multiplied by 10 which will exceed the value.
+//why checking > 7 and  <-8 is we can allow values till max and in values of integer till the reminder of value is not exceeding those numbers...as we add the reminder in next step if number exceeds lets say 7 then that will exceed integer imitation
