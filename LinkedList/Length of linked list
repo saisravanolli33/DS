@@ -1,0 +1,8 @@
+ solve(node) {
+        int counter=0;
+        while(LLNode.next!=null){
+            counter++;
+            LLNode=LLNode.next();
+        }
+        return counter;
+    }
