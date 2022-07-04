@@ -77,7 +77,7 @@ public class Solution {
  */
 public class Solution {
     public ListNode ReverseList(ListNode head) {
-        //recursive approach
+        //recursive approach refer anuj bhayya youtube
         if(head==null||head.next==null)
             return head;
         ListNode NewHead=ReverseList(head.next);
